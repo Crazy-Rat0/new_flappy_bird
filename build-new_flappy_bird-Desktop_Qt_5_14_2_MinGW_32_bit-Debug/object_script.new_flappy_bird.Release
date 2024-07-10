@@ -1,0 +1,14 @@
+release/app.o
+release/bird.o
+release/map.o
+release/main.o
+release/graphicsview.o
+release/mainwindow.o
+release/viewmodel.o
+release/qrc_res.o
+release/moc_app.o
+release/moc_bird.o
+release/moc_map.o
+release/moc_graphicsview.o
+release/moc_mainwindow.o
+release/moc_viewmodel.o

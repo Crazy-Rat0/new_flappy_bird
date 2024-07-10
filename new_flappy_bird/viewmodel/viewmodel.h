@@ -3,12 +3,12 @@
 
 #include <QObject>
 #include"../common/map.h"
-class viewmodel:QObject
+class viewmodel:public QObject
 {
     Q_OBJECT
 
 public:
-    explicit viewmodel(QObject *parent = nullptr);
+    explicit viewmodel(QObject *parent = nullptr,map* a_map=nullptr);
     ~viewmodel();
 
     map* map() const;
@@ -27,7 +27,8 @@ signals:
     void gameOver();
     void birdIsDeadChanged();
     void birdXChanged();
-    void birdYChanged();
+    void birdYChanged(int y);
+    void birdY2Changed();//debug 用，记得删除
 
 private:
     class map* m_map;

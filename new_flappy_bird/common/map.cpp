@@ -4,11 +4,13 @@ map::map(QObject *parent)
     : QObject(parent), /*m_pipeCount(10),*/ /*m_pipeGap(150),*/ m_bird(new class bird(this))
 {
 //    generatePipes();
+    this->m_bird=new class bird;
 }
 
 map::~map()
 {
 //    clearPipes();
+
     delete m_bird;
 }
 

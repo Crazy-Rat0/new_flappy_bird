@@ -1,7 +1,7 @@
 #include "bird.h"
-
+#include <QDebug>
 bird::bird(QObject *parent)
-    : QObject(parent), m_isDead(false), m_x(0), m_y(0)
+    : QObject(parent), m_isDead(false), m_x(170), m_y(202)
 {
 }
 
@@ -51,9 +51,13 @@ void bird::drop()
 
 void bird::fly()
 {
+
     if (!isDead()) {
-        setY(y() - 10);
+        qDebug()<<"fly successfully now Y:";
+        setY(y() - 40);
+        qDebug()<<y();
     }
+     qDebug()<<"fly fail final";
 }
 
 void bird::changeImage()

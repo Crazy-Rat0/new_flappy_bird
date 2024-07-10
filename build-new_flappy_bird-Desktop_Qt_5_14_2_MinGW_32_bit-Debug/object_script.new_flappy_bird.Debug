@@ -1,0 +1,14 @@
+debug/app.o
+debug/bird.o
+debug/map.o
+debug/main.o
+debug/graphicsview.o
+debug/mainwindow.o
+debug/viewmodel.o
+debug/qrc_res.o
+debug/moc_app.o
+debug/moc_bird.o
+debug/moc_map.o
+debug/moc_graphicsview.o
+debug/moc_mainwindow.o
+debug/moc_viewmodel.o

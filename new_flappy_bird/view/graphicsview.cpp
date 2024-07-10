@@ -1,5 +1,8 @@
 #include "graphicsview.h"
 #include <QMouseEvent>
+#include <QDebug>
+#include <QPoint>
+#include <QPointF>
 graphicsView::graphicsView(QWidget* parent):QGraphicsView(parent)
 {
         QPixmap a(":/Images/bird2.png");
@@ -11,12 +14,37 @@ graphicsView::graphicsView(QWidget* parent):QGraphicsView(parent)
 
         this->setScene(scene_view);
         this->setFixedSize(384,448);
+
 }
 
 
 void graphicsView::redraw_bird(int y)
 {
-    bird_view->setPos(170,y);
+    QGraphicsView *view = scene_view->views().first();
+    QGraphicsScene *scene = scene_view;
+    qDebug()<<"redraw get";
+
+    // 步骤 1: 获取 bird_view 在场景坐标系中的位置
+    QPointF scenePos = bird_view->pos(); // bird_view->pos() 返回项在场景中的坐标
+
+    // 步骤 2: 将场景坐标转换为视图坐标（这里场景坐标已经是从pos()获得的）
+    QPointF viewPos = view->mapFromScene(scenePos); // 将场景坐标转换为视图坐标
+
+    // 步骤 3: 将视图坐标转换为 MainWindow 的坐标
+    QPoint mainWindowPos = view->mapToParent(viewPos.toPoint()); // 将视图坐标转换为父窗口坐标
+
+    int newY = y; // 你的 MainWindow 坐标系下的 y 值
+
+    // 将 mainWindowPos 中的 y 坐标转换为视图坐标
+    QPoint viewPosY = view->mapFromParent(QPoint(mainWindowPos.x(), newY));
+
+    // 将视图坐标转换为场景坐标
+    scenePos = view->mapToScene(viewPosY);
+
+    // 设置 bird_view 在场景中的位置
+    bird_view->setPos(scenePos);
+
+
 }
 
 

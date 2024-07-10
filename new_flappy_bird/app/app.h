@@ -5,11 +5,16 @@
 #include "../viewmodel/viewmodel.h"
 #include "../common/map.h"
 #include <QObject>
-class app:QObject
+#include <QDebug>
+class app:public QObject
 {
     Q_OBJECT
 public:
     app(MainWindow* view,viewmodel* viewmodel,map* map);
+public slots:
+    void F_de_bug(){
+        qDebug()<<"signal win";
+    }//debug 用，记得删除
 };
 
 #endif // APP_H
