@@ -4,8 +4,10 @@
 #include "../view/mainwindow.h"
 #include "../viewmodel/viewmodel.h"
 #include "../common/map.h"
-class app
+#include <QObject>
+class app:QObject
 {
+    Q_OBJECT
 public:
     app(MainWindow* view,viewmodel* viewmodel,map* map);
 };

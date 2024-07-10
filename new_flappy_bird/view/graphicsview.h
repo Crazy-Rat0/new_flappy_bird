@@ -15,6 +15,11 @@ public:
     QGraphicsPixmapItem* bird_view;
 public slots:
     void redraw_bird(int y);
+signals:
+    //自定义clicked()信号,在mousePressEvent事件发生时触发
+    void clicked();
+protected:
+    virtual void mousePressEvent(QMouseEvent *event);
 };
 
 #endif // GRAPHICSVIEW_H

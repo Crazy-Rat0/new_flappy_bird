@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include"../common/map.h"
-class viewmodel
+class viewmodel:QObject
 {
     Q_OBJECT
 
