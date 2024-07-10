@@ -19,12 +19,14 @@ SOURCES += \
     app/app.cpp \
     common/map.cpp \
     app/main.cpp \
+    view/graphicsview.cpp \
     view/mainwindow.cpp \
     viewmodel/viewmodel.cpp
 
 HEADERS += \
     app/app.h \
     common/map.h \
+    view/graphicsview.h \
     view/mainwindow.h \
     viewmodel/viewmodel.h
 
