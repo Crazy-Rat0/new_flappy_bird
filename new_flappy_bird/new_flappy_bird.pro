@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     app/app.cpp \
+    common/bird.cpp \
     common/map.cpp \
     app/main.cpp \
     view/graphicsview.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
 
 HEADERS += \
     app/app.h \
+    common/bird.h \
     common/map.h \
     view/graphicsview.h \
     view/mainwindow.h \
