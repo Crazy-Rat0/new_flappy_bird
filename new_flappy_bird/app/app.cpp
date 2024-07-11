@@ -1,18 +1,24 @@
 #include "app.h"
 #include <QDebug>
-app::app(MainWindow* view,viewmodel* viewmodel,map* map)
-{
+app::app(MainWindow* view)
+{//
+//app(MainWindow* view,viewmodel* viewmodel,map* map)
 //   ;
     //command binding
-    connect(view->son,&graphicsView::clicked,viewmodel,&viewmodel::onFly);
+        App_map=new map;
+        App_viewmodel =new viewmodel(nullptr,App_map);
+    connect(view->son,&graphicsView::clicked,App_viewmodel,&viewmodel::onFly);
+
+
+    //notifying binding
+    connect(App_viewmodel,&viewmodel::birdYChanged,view->son,&graphicsView::redraw_bird);
 
 
     //data binding
-    connect(viewmodel,&viewmodel::birdYChanged,view->son,&graphicsView::redraw_bird);
-
+    view->son->setMap(App_map);
 
     //debug用，记得删除
-    connect(viewmodel,&viewmodel::birdY2Changed,this,&app::F_de_bug);
+    connect(App_viewmodel,&viewmodel::birdY2Changed,this,&app::F_de_bug);
 
 
 

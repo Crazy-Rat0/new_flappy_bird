@@ -7,9 +7,9 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-    map m;
-    viewmodel v(nullptr,&m);
-    app c(&w,&v,&m);
+
+    //app c(,&v,&m);
+    app c(&w);
     w.show();
     return a.exec();
 }

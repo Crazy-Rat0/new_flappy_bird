@@ -3,7 +3,7 @@
 #include <QDebug>
 #include <QPoint>
 #include <QPointF>
-graphicsView::graphicsView(QWidget* parent):QGraphicsView(parent)
+graphicsView::graphicsView(QWidget* parent):QGraphicsView(parent),View_map(nullptr)
 {
         QPixmap a(":/Images/bird2.png");
 
@@ -18,7 +18,7 @@ graphicsView::graphicsView(QWidget* parent):QGraphicsView(parent)
 }
 
 
-void graphicsView::redraw_bird(int y)
+void graphicsView::redraw_bird()
 {
     QGraphicsView *view = scene_view->views().first();
     QGraphicsScene *scene = scene_view;
@@ -33,7 +33,7 @@ void graphicsView::redraw_bird(int y)
     // 步骤 3: 将视图坐标转换为 MainWindow 的坐标
     QPoint mainWindowPos = view->mapToParent(viewPos.toPoint()); // 将视图坐标转换为父窗口坐标
 
-    int newY = y; // 你的 MainWindow 坐标系下的 y 值
+    int newY = View_map->bird()->y(); // 你的 MainWindow 坐标系下的 y 值
 
     // 将 mainWindowPos 中的 y 坐标转换为视图坐标
     QPoint viewPosY = view->mapFromParent(QPoint(mainWindowPos.x(), newY));
@@ -59,4 +59,8 @@ void graphicsView::mousePressEvent(QMouseEvent *event)
     }
     //将该事件传给父类处理
     //QLineEdit::mousePressEvent(event);
+}
+void graphicsView::setMap(map* inMap)
+{
+    this->View_map = inMap;
 }

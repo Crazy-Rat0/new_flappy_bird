@@ -27,7 +27,7 @@ signals:
     void gameOver();
     void birdIsDeadChanged();
     void birdXChanged();
-    void birdYChanged(int y);
+    void birdYChanged();
     void birdY2Changed();//debug 用，记得删除
 
 private:

@@ -10,7 +10,10 @@ class app:public QObject
 {
     Q_OBJECT
 public:
-    app(MainWindow* view,viewmodel* viewmodel,map* map);
+    //app(MainWindow* view,viewmodel* viewmodel,map* map);
+    app(MainWindow* view);
+    viewmodel* App_viewmodel;
+    map* App_map;
 public slots:
     void F_de_bug(){
         qDebug()<<"signal win";

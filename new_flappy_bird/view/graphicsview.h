@@ -4,6 +4,8 @@
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QWidget>
+#include"../common/map.h"
+
 
 class graphicsView:public QGraphicsView
 {
@@ -13,8 +15,10 @@ public:
 public:
     QGraphicsScene* scene_view;
     QGraphicsPixmapItem* bird_view;
+    void setMap(map* inMap);
+    map* View_map;
 public slots:
-    void redraw_bird(int y);
+    void redraw_bird();
 signals:
     //自定义clicked()信号,在mousePressEvent事件发生时触发
     void clicked();
