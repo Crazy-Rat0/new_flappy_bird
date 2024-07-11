@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     QIcon icon(":/Images/bird.ico");//set icon of window
     setWindowIcon(icon);
 
-    son=new graphicsView(this);
+    son=new graphicsView(ui->centralwidget);
 
 
 

@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_graphicsView_t {
     QByteArrayData data[4];
-    char stringdata0[34];
+    char stringdata0[29];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,10 +35,10 @@ static const qt_meta_stringdata_graphicsView_t qt_meta_stringdata_graphicsView =
 QT_MOC_LITERAL(0, 0, 12), // "graphicsView"
 QT_MOC_LITERAL(1, 13, 7), // "clicked"
 QT_MOC_LITERAL(2, 21, 0), // ""
-QT_MOC_LITERAL(3, 22, 11) // "redraw_bird"
+QT_MOC_LITERAL(3, 22, 6) // "redraw"
 
     },
-    "graphicsView\0clicked\0\0redraw_bird"
+    "graphicsView\0clicked\0\0redraw"
 };
 #undef QT_MOC_LITERAL
 
@@ -77,7 +77,7 @@ void graphicsView::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->clicked(); break;
-        case 1: _t->redraw_bird(); break;
+        case 1: _t->redraw(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {

@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -21,7 +20,6 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -35,10 +33,10 @@ public:
 "    background-position: center;"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        centralwidget->setMinimumSize(QSize(384, 448));
+        centralwidget->setMaximumSize(QSize(384, 448));
+        centralwidget->setStyleSheet(QString::fromUtf8(""));
         MainWindow->setCentralWidget(centralwidget);
-        statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
 

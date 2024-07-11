@@ -287,13 +287,17 @@ release/moc_app.cpp: ../new_flappy_bird/app/app.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QWidget \
 		../new_flappy_bird/view/graphicsview.h \
-		../new_flappy_bird/viewmodel/viewmodel.h \
-		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QObject \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QTimer \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qtimer.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
 		../new_flappy_bird/common/map.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QObject \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QList \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QRandomGenerator \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qrandom.h \
 		../new_flappy_bird/common/bird.h \
+		../new_flappy_bird/viewmodel/viewmodel.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QDebug \
 		release/moc_predefs.h \
 		../../../qt/QT/5.14.2/mingw73_32/bin/moc.exe
 	F:\qt\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include F:/QT_project/new_flappy_bird/build-new_flappy_bird-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h -IF:/qt/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -IF:/QT_project/new_flappy_bird/new_flappy_bird -IF:/qt/QT/5.14.2/mingw73_32/include -IF:/qt/QT/5.14.2/mingw73_32/include/QtWidgets -IF:/qt/QT/5.14.2/mingw73_32/include/QtGui -IF:/qt/QT/5.14.2/mingw73_32/include/QtANGLE -IF:/qt/QT/5.14.2/mingw73_32/include/QtCore -I. -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IF:/qt/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\new_flappy_bird\app\app.h -o release\moc_app.cpp
@@ -535,6 +539,15 @@ release/moc_graphicsview.cpp: ../new_flappy_bird/view/graphicsview.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/qvector2d.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/qtouchdevice.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QWidget \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QTimer \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qtimer.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
+		../new_flappy_bird/common/map.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QObject \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QList \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QRandomGenerator \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qrandom.h \
+		../new_flappy_bird/common/bird.h \
 		release/moc_predefs.h \
 		../../../qt/QT/5.14.2/mingw73_32/bin/moc.exe
 	F:\qt\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include F:/QT_project/new_flappy_bird/build-new_flappy_bird-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h -IF:/qt/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -IF:/QT_project/new_flappy_bird/new_flappy_bird -IF:/qt/QT/5.14.2/mingw73_32/include -IF:/qt/QT/5.14.2/mingw73_32/include/QtWidgets -IF:/qt/QT/5.14.2/mingw73_32/include/QtGui -IF:/qt/QT/5.14.2/mingw73_32/include/QtANGLE -IF:/qt/QT/5.14.2/mingw73_32/include/QtCore -I. -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IF:/qt/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\new_flappy_bird\view\graphicsview.h -o release\moc_graphicsview.cpp
@@ -661,6 +674,15 @@ release/moc_mainwindow.cpp: ../new_flappy_bird/view/mainwindow.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QWidget \
 		../new_flappy_bird/view/graphicsview.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QTimer \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qtimer.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
+		../new_flappy_bird/common/map.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QObject \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QList \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QRandomGenerator \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qrandom.h \
+		../new_flappy_bird/common/bird.h \
 		release/moc_predefs.h \
 		../../../qt/QT/5.14.2/mingw73_32/bin/moc.exe
 	F:\qt\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include F:/QT_project/new_flappy_bird/build-new_flappy_bird-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h -IF:/qt/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -IF:/QT_project/new_flappy_bird/new_flappy_bird -IF:/qt/QT/5.14.2/mingw73_32/include -IF:/qt/QT/5.14.2/mingw73_32/include/QtWidgets -IF:/qt/QT/5.14.2/mingw73_32/include/QtGui -IF:/qt/QT/5.14.2/mingw73_32/include/QtANGLE -IF:/qt/QT/5.14.2/mingw73_32/include/QtCore -I. -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IF:/qt/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\new_flappy_bird\view\mainwindow.h -o release\moc_mainwindow.cpp
@@ -874,13 +896,17 @@ release/app.o: ../new_flappy_bird/app/app.cpp ../new_flappy_bird/app/app.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QWidget \
 		../new_flappy_bird/view/graphicsview.h \
-		../new_flappy_bird/viewmodel/viewmodel.h \
-		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QObject \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QTimer \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qtimer.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
 		../new_flappy_bird/common/map.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QObject \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QList \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QRandomGenerator \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qrandom.h \
-		../new_flappy_bird/common/bird.h
+		../new_flappy_bird/common/bird.h \
+		../new_flappy_bird/viewmodel/viewmodel.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\app.o ..\new_flappy_bird\app\app.cpp
 
 release/bird.o: ../new_flappy_bird/common/bird.cpp ../new_flappy_bird/common/bird.h \
@@ -936,7 +962,20 @@ release/bird.o: ../new_flappy_bird/common/bird.cpp ../new_flappy_bird/common/bir
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qmetatype.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qvarlengtharray.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qcontainerfwd.h \
-		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qobject_impl.h
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qobject_impl.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QDebug \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qdebug.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qhash.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qmap.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qtextstream.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qiodevice.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qlocale.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qvariant.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qshareddata.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qset.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qcontiguouscache.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qsharedpointer.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qsharedpointer_impl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\bird.o ..\new_flappy_bird\common\bird.cpp
 
 release/map.o: ../new_flappy_bird/common/map.cpp ../new_flappy_bird/common/map.h \
@@ -1121,6 +1160,18 @@ release/main.o: ../new_flappy_bird/app/main.cpp ../new_flappy_bird/view/mainwind
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QWidget \
 		../new_flappy_bird/view/graphicsview.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QTimer \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qtimer.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
+		../new_flappy_bird/common/map.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QObject \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QList \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QRandomGenerator \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qrandom.h \
+		../new_flappy_bird/common/bird.h \
+		../new_flappy_bird/app/app.h \
+		../new_flappy_bird/viewmodel/viewmodel.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QDebug \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QApplication \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qapplication.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qcoreapplication.h \
@@ -1247,7 +1298,19 @@ release/graphicsview.o: ../new_flappy_bird/view/graphicsview.cpp ../new_flappy_b
 		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/qvector2d.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/qtouchdevice.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QWidget \
-		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/QMouseEvent
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QTimer \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qtimer.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
+		../new_flappy_bird/common/map.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QObject \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QList \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QRandomGenerator \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qrandom.h \
+		../new_flappy_bird/common/bird.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/QMouseEvent \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QDebug \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QPoint \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QPointF
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\graphicsview.o ..\new_flappy_bird\view\graphicsview.cpp
 
 release/mainwindow.o: ../new_flappy_bird/view/mainwindow.cpp ../new_flappy_bird/view/mainwindow.h \
@@ -1372,6 +1435,15 @@ release/mainwindow.o: ../new_flappy_bird/view/mainwindow.cpp ../new_flappy_bird/
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QWidget \
 		../new_flappy_bird/view/graphicsview.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QTimer \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qtimer.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
+		../new_flappy_bird/common/map.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QObject \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QList \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QRandomGenerator \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qrandom.h \
+		../new_flappy_bird/common/bird.h \
 		ui_mainwindow.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QVariant \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QApplication \
@@ -1381,13 +1453,82 @@ release/mainwindow.o: ../new_flappy_bird/view/mainwindow.cpp ../new_flappy_bird/
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/qguiapplication.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
-		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QStatusBar \
-		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qstatusbar.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/QPixmap \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\new_flappy_bird\view\mainwindow.cpp
 
-release/viewmodel.o: ../new_flappy_bird/viewmodel/viewmodel.cpp 
+release/viewmodel.o: ../new_flappy_bird/viewmodel/viewmodel.cpp ../new_flappy_bird/viewmodel/viewmodel.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QObject \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qobject.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qobjectdefs.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qnamespace.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qglobal.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qconfig-bootstrapped.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qconfig.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qtcore-config.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qsystemdetection.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qprocessordetection.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qcompilerdetection.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qtypeinfo.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qsysinfo.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qlogging.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qflags.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qatomic.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qbasicatomic.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qatomic_bootstrap.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qgenericatomic.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qatomic_cxx11.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qatomic_msvc.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qglobalstatic.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qmutex.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qnumeric.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qversiontagging.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qobjectdefs_impl.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qstring.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qchar.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qbytearray.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qrefcount.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qarraydata.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qstringliteral.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qstringalgorithms.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qstringview.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qstringbuilder.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qlist.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qalgorithms.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qiterator.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qhashfunctions.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qpair.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qvector.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qcontainertools_impl.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qpoint.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qbytearraylist.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qstringlist.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qregexp.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qstringmatcher.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qcoreevent.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qscopedpointer.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qmetatype.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qvarlengtharray.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qcontainerfwd.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qobject_impl.h \
+		../new_flappy_bird/common/map.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QList \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QRandomGenerator \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qrandom.h \
+		../new_flappy_bird/common/bird.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QDebug \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qdebug.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qhash.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qmap.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qtextstream.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qiodevice.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qlocale.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qvariant.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qshareddata.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qset.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qcontiguouscache.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qsharedpointer.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qsharedpointer_impl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\viewmodel.o ..\new_flappy_bird\viewmodel\viewmodel.cpp
 
 release/qrc_res.o: release/qrc_res.cpp 

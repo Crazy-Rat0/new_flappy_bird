@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_viewmodel_t {
     QByteArrayData data[10];
-    char stringdata0[107];
+    char stringdata0[100];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,15 +39,14 @@ QT_MOC_LITERAL(3, 23, 8), // "gameOver"
 QT_MOC_LITERAL(4, 32, 17), // "birdIsDeadChanged"
 QT_MOC_LITERAL(5, 50, 12), // "birdXChanged"
 QT_MOC_LITERAL(6, 63, 12), // "birdYChanged"
-QT_MOC_LITERAL(7, 76, 13), // "birdY2Changed"
-QT_MOC_LITERAL(8, 90, 10), // "updateGame"
-QT_MOC_LITERAL(9, 101, 5) // "onFly"
+QT_MOC_LITERAL(7, 76, 10), // "updateGame"
+QT_MOC_LITERAL(8, 87, 5), // "onFly"
+QT_MOC_LITERAL(9, 93, 6) // "onDrop"
 
     },
     "viewmodel\0gameUpdated\0\0gameOver\0"
     "birdIsDeadChanged\0birdXChanged\0"
-    "birdYChanged\0birdY2Changed\0updateGame\0"
-    "onFly"
+    "birdYChanged\0updateGame\0onFly\0onDrop"
 };
 #undef QT_MOC_LITERAL
 
@@ -62,7 +61,7 @@ static const uint qt_meta_data_viewmodel[] = {
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       6,       // signalCount
+       5,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
        1,    0,   54,    2, 0x06 /* Public */,
@@ -70,9 +69,9 @@ static const uint qt_meta_data_viewmodel[] = {
        4,    0,   56,    2, 0x06 /* Public */,
        5,    0,   57,    2, 0x06 /* Public */,
        6,    0,   58,    2, 0x06 /* Public */,
-       7,    0,   59,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
+       7,    0,   59,    2, 0x0a /* Public */,
        8,    0,   60,    2, 0x0a /* Public */,
        9,    0,   61,    2, 0x0a /* Public */,
 
@@ -82,9 +81,9 @@ static const uint qt_meta_data_viewmodel[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -102,9 +101,9 @@ void viewmodel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 2: _t->birdIsDeadChanged(); break;
         case 3: _t->birdXChanged(); break;
         case 4: _t->birdYChanged(); break;
-        case 5: _t->birdY2Changed(); break;
-        case 6: _t->updateGame(); break;
-        case 7: _t->onFly(); break;
+        case 5: _t->updateGame(); break;
+        case 6: _t->onFly(); break;
+        case 7: _t->onDrop(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -141,13 +140,6 @@ void viewmodel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
             using _t = void (viewmodel::*)();
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&viewmodel::birdYChanged)) {
                 *result = 4;
-                return;
-            }
-        }
-        {
-            using _t = void (viewmodel::*)();
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&viewmodel::birdY2Changed)) {
-                *result = 5;
                 return;
             }
         }
@@ -223,12 +215,6 @@ void viewmodel::birdXChanged()
 void viewmodel::birdYChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 4, nullptr);
-}
-
-// SIGNAL 5
-void viewmodel::birdY2Changed()
-{
-    QMetaObject::activate(this, &staticMetaObject, 5, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

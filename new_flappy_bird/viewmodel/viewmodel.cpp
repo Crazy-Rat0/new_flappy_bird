@@ -29,10 +29,19 @@ void viewmodel::updateGame()
 
 void viewmodel::onFly()
 {
-    qDebug()<<"access to fly successfully #"<<11;
-    qDebug()<<m_map->bird()->y();
+
+
     m_map->bird()->fly();
-    qDebug()<<"access to fly total successfully";
     emit birdYChanged();
-    emit birdY2Changed();//debug 用，记得删除
+
+}
+
+
+void viewmodel::onDrop()
+{
+
+
+    m_map->bird()->drop();
+    emit birdYChanged();
+
 }

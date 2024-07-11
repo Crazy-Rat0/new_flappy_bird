@@ -13,11 +13,7 @@ public:
     //app(MainWindow* view,viewmodel* viewmodel,map* map);
     app(MainWindow* view);
     viewmodel* App_viewmodel;
-    map* App_map;
-public slots:
-    void F_de_bug(){
-        qDebug()<<"signal win";
-    }//debug 用，记得删除
+   // map* App_map;
 };
 
 #endif // APP_H

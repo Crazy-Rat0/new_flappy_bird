@@ -9,20 +9,27 @@ graphicsView::graphicsView(QWidget* parent):QGraphicsView(parent),View_map(nullp
 
          bird_view= new QGraphicsPixmapItem(a);
 
-        scene_view=new QGraphicsScene;
+        scene_view=new QGraphicsScene;//
+
         scene_view->addItem(bird_view);
+
 
         this->setScene(scene_view);
         this->setFixedSize(384,448);
 
+
+
+
+
+
 }
 
 
-void graphicsView::redraw_bird()
+void graphicsView::redraw()
 {
-    QGraphicsView *view = scene_view->views().first();
-    QGraphicsScene *scene = scene_view;
-    qDebug()<<"redraw get";
+    QGraphicsView *view = this;//scene_view->views().first();
+
+
 
     // 步骤 1: 获取 bird_view 在场景坐标系中的位置
     QPointF scenePos = bird_view->pos(); // bird_view->pos() 返回项在场景中的坐标

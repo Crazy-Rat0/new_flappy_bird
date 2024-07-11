@@ -7,20 +7,25 @@ app::app(MainWindow* view)
     //command binding
 
         App_viewmodel =new viewmodel(nullptr);
-        App_map= App_viewmodel->map();
 
     connect(view->son,&graphicsView::clicked,App_viewmodel,&viewmodel::onFly);
 
 
     //notifying binding
-    connect(App_viewmodel,&viewmodel::birdYChanged,view->son,&graphicsView::redraw_bird);
+    connect(App_viewmodel,&viewmodel::birdYChanged,view->son,&graphicsView::redraw);
 
 
     //data binding
-    view->son->setMap(App_map);
+    view->son->setMap(App_viewmodel->map());
 
-    //debug用，记得删除
-    connect(App_viewmodel,&viewmodel::birdY2Changed,this,&app::F_de_bug);
+    //set timer
+    view->son->drop_timer = new QTimer(view->son);
+    view->son->drop_timer->start(25);
+
+    connect(view->son->drop_timer,&QTimer::timeout,App_viewmodel,&viewmodel::onDrop);
+
+
+
 
 
 

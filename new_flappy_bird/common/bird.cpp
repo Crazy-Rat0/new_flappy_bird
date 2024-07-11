@@ -46,7 +46,15 @@ void bird::setY(int y)
 
 void bird::drop()
 {
-    setY(y() + 1);
+    if (!isDead()) {
+
+        if(y()+1<=403)
+        setY(y()+1);
+        else
+            setY(403);
+    }
+
+
 }
 
 void bird::fly()
@@ -54,10 +62,13 @@ void bird::fly()
 
     if (!isDead()) {
         qDebug()<<"fly successfully now Y:";
+        if(y()-40>=0)
         setY(y() - 40);
+        else
+            setY(0);
         qDebug()<<y();
     }
-     qDebug()<<"fly fail final";
+
 }
 
 void bird::changeImage()

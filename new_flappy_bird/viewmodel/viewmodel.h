@@ -20,7 +20,7 @@ public:
 public slots:
     void updateGame();
     void onFly();
-
+    void onDrop();
 
 signals:
     void gameUpdated();
@@ -28,7 +28,7 @@ signals:
     void birdIsDeadChanged();
     void birdXChanged();
     void birdYChanged();
-    void birdY2Changed();//debug 用，记得删除
+
 
 private:
     class map* m_map;
