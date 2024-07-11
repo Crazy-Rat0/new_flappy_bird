@@ -4,6 +4,7 @@
 viewmodel::viewmodel(QObject *parent,class map* a_map) : QObject(parent), m_map(a_map)
 {
     //connect(m_map, &map::collisionDetected, this, &viewmodel::gameOver);
+    m_map =new class map;
 }
 
 viewmodel::~viewmodel()
@@ -11,10 +12,10 @@ viewmodel::~viewmodel()
     //delete m_map;
 }
 
-//map* viewmodel::map() const
-//{
-//    return m_map;
-//}
+map* viewmodel::map() const
+{
+    return m_map;
+}
 
 void viewmodel::updateGame()
 {

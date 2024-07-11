@@ -5,8 +5,10 @@ app::app(MainWindow* view)
 //app(MainWindow* view,viewmodel* viewmodel,map* map)
 //   ;
     //command binding
-        App_map=new map;
-        App_viewmodel =new viewmodel(nullptr,App_map);
+
+        App_viewmodel =new viewmodel(nullptr);
+        App_map= App_viewmodel->map();
+
     connect(view->son,&graphicsView::clicked,App_viewmodel,&viewmodel::onFly);
 
 
