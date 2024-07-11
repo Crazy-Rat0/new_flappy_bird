@@ -44,4 +44,5 @@ void viewmodel::onDrop()
     m_map->bird()->drop();
     emit birdYChanged();
 
+
 }

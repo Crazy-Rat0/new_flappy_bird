@@ -15,6 +15,7 @@ app::app(MainWindow* view)
     connect(App_viewmodel,&viewmodel::birdYChanged,view->son,&graphicsView::redraw);
 
 
+
     //data binding
     view->son->setMap(App_viewmodel->map());
 

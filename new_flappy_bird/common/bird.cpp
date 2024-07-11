@@ -48,10 +48,17 @@ void bird::drop()
 {
     if (!isDead()) {
 
-        if(y()+1<=403)
-        setY(y()+1);
+        if(y()+2<=401)
+        {
+            setY(y()+2);
+        }
+
         else
-            setY(403);
+        {
+            setY(401);
+            setIsDead(true);
+        }
+
     }
 
 

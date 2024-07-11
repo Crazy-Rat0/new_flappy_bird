@@ -30,7 +30,7 @@ signals:
     void birdYChanged();
 
 
-private:
+public:
     class map* m_map;
 };
 
