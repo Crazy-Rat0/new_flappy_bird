@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_viewmodel_t {
-    QByteArrayData data[10];
-    char stringdata0[100];
+    QByteArrayData data[11];
+    char stringdata0[108];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -41,12 +41,14 @@ QT_MOC_LITERAL(5, 50, 12), // "birdXChanged"
 QT_MOC_LITERAL(6, 63, 12), // "birdYChanged"
 QT_MOC_LITERAL(7, 76, 10), // "updateGame"
 QT_MOC_LITERAL(8, 87, 5), // "onFly"
-QT_MOC_LITERAL(9, 93, 6) // "onDrop"
+QT_MOC_LITERAL(9, 93, 6), // "onDrop"
+QT_MOC_LITERAL(10, 100, 7) // "onReset"
 
     },
     "viewmodel\0gameUpdated\0\0gameOver\0"
     "birdIsDeadChanged\0birdXChanged\0"
-    "birdYChanged\0updateGame\0onFly\0onDrop"
+    "birdYChanged\0updateGame\0onFly\0onDrop\0"
+    "onReset"
 };
 #undef QT_MOC_LITERAL
 
@@ -56,7 +58,7 @@ static const uint qt_meta_data_viewmodel[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -64,16 +66,17 @@ static const uint qt_meta_data_viewmodel[] = {
        5,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   54,    2, 0x06 /* Public */,
-       3,    0,   55,    2, 0x06 /* Public */,
-       4,    0,   56,    2, 0x06 /* Public */,
-       5,    0,   57,    2, 0x06 /* Public */,
-       6,    0,   58,    2, 0x06 /* Public */,
+       1,    0,   59,    2, 0x06 /* Public */,
+       3,    0,   60,    2, 0x06 /* Public */,
+       4,    0,   61,    2, 0x06 /* Public */,
+       5,    0,   62,    2, 0x06 /* Public */,
+       6,    0,   63,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       7,    0,   59,    2, 0x0a /* Public */,
-       8,    0,   60,    2, 0x0a /* Public */,
-       9,    0,   61,    2, 0x0a /* Public */,
+       7,    0,   64,    2, 0x0a /* Public */,
+       8,    0,   65,    2, 0x0a /* Public */,
+       9,    0,   66,    2, 0x0a /* Public */,
+      10,    0,   67,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -83,6 +86,7 @@ static const uint qt_meta_data_viewmodel[] = {
     QMetaType::Void,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -104,6 +108,7 @@ void viewmodel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 5: _t->updateGame(); break;
         case 6: _t->onFly(); break;
         case 7: _t->onDrop(); break;
+        case 8: _t->onReset(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -176,13 +181,13 @@ int viewmodel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 9;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 9)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 8;
+        _id -= 9;
     }
     return _id;
 }

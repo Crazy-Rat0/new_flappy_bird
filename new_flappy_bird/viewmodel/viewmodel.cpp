@@ -26,6 +26,13 @@ void viewmodel::updateGame()
     // }
     emit gameUpdated();
 }
+void viewmodel::onReset()
+{
+    m_map->bird()->setX(170);
+    m_map->bird()->setY(202);
+    m_map->bird()->setIsDead(false);
+    emit birdYChanged();
+}
 
 void viewmodel::onFly()
 {
@@ -46,3 +53,5 @@ void viewmodel::onDrop()
 
 
 }
+
+
