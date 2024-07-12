@@ -24,6 +24,14 @@ graphicsView::graphicsView(QWidget* parent):QGraphicsView(parent),View_map(nullp
         ResetBtn->setStyleSheet("background-image: url(:/Images/replay.png);"
                                 );
 
+        GameOver=new QLabel(this);
+        GameOver->setFixedSize(256,57);
+        GameOver->move(65,140);
+        GameOver->hide();
+        GameOver->setStyleSheet("background-image: url(:/Images/gameover.png);"
+                                );
+
+
 
 
 
@@ -63,10 +71,12 @@ void graphicsView::redraw()
     if(View_map->bird()->isDead())
     {
         this->ResetBtn->show();
+        this->GameOver->show();
     }
     else
     {
         this->ResetBtn->hide();
+        this->GameOver->hide();
     }
 
 

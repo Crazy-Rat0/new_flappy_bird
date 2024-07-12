@@ -7,6 +7,7 @@
 #include <QTimer>
 #include"../common/map.h"
 #include <QPushButton>
+#include <QLabel>
 
 class graphicsView:public QGraphicsView
 {
@@ -16,11 +17,12 @@ public:
 public:
     QGraphicsScene* scene_view;
     QGraphicsPixmapItem* bird_view;
-    QGraphicsPixmapItem* GameOver_view;
+
     void setMap(map* inMap);
     map* View_map;
     QTimer* drop_timer;
     QPushButton* ResetBtn;
+    QLabel* GameOver;
 public slots:
     void redraw();
 signals:
