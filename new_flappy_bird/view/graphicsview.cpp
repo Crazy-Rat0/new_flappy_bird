@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <QPoint>
 #include <QPointF>
+
 graphicsView::graphicsView(QWidget* parent):QGraphicsView(parent),View_map(nullptr)
 {
         QPixmap a(":/Images/bird2.png");
@@ -16,6 +17,13 @@ graphicsView::graphicsView(QWidget* parent):QGraphicsView(parent),View_map(nullp
 
         this->setScene(scene_view);
         this->setFixedSize(384,448);
+
+        ResetBtn=new QPushButton(this);
+        ResetBtn->move(170,242);
+        ResetBtn->hide();
+        ResetBtn->setStyleSheet("background-image: url(:/Images/replay.png);"
+                                );
+
 
 
 
@@ -50,6 +58,13 @@ void graphicsView::redraw()
 
     // 设置 bird_view 在场景中的位置
     bird_view->setPos(scenePos);
+
+
+    if(View_map->bird()->isDead())
+    {
+        this->ResetBtn->show();
+    }
+
 
 
 }

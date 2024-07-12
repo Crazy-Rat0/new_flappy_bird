@@ -15,6 +15,7 @@ public:
     explicit map(QObject *parent = nullptr);
     ~map();
 
+
 //    void generatePipes();
 //    void movePipes();
     void updateBird();
@@ -28,10 +29,10 @@ signals:
 
 private:
 //    QList<Pipe*> m_pipes;
-    class bird* m_bird;
+
 //    int m_pipeCount;
 //    int m_pipeGap;
-
+    class bird* m_bird;
     void clearPipes();
 };
 

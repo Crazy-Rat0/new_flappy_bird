@@ -9,6 +9,7 @@ app::app(MainWindow* view)
         App_viewmodel =new viewmodel(nullptr);
 
     connect(view->son,&graphicsView::clicked,App_viewmodel,&viewmodel::onFly);
+    connect(view->son->ResetBtn,&QPushButton::clicked,App_viewmodel,&viewmodel::onReset);
 
 
     //notifying binding

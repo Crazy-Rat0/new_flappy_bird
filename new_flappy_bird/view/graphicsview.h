@@ -6,7 +6,7 @@
 #include <QWidget>
 #include <QTimer>
 #include"../common/map.h"
-
+#include <QPushButton>
 
 class graphicsView:public QGraphicsView
 {
@@ -20,6 +20,7 @@ public:
     void setMap(map* inMap);
     map* View_map;
     QTimer* drop_timer;
+    QPushButton* ResetBtn;
 public slots:
     void redraw();
 signals:
