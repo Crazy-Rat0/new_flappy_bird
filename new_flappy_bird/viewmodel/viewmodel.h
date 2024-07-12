@@ -21,6 +21,7 @@ public slots:
     void updateGame();
     void onFly();
     void onDrop();
+    void onReset();
 
 signals:
     void gameUpdated();

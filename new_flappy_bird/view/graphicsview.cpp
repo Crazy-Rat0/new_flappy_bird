@@ -64,6 +64,10 @@ void graphicsView::redraw()
     {
         this->ResetBtn->show();
     }
+    else
+    {
+        this->ResetBtn->hide();
+    }
 
 
 
