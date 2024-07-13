@@ -79,11 +79,13 @@ void viewmodel::updatePipes() {
     for (pipe *pipe : m_map->getPipes()) {
         pipe->moveLeft();
     }
-//    if (m_map->getPipes().first()->getX() < -70) {
+    if (m_map->getPipes().first()->getX() < -70) {
 //        pipe *firstUpper = m_map->getPipes().takeFirst();
 //        pipe *firstLower = m_map->getPipes().takeFirst();
 //        delete firstUpper;
 //        delete firstLower;
+        qDebug() << "remove";
+    }
 
 //        int gap = QRandomGenerator::global()->bounded(100, 200);
 //        int h_up = QRandomGenerator::global()->bounded(100, 200);

@@ -20,5 +20,5 @@ int pipe::isUpper() const {
 }
 
 void pipe::moveLeft() {
-    setX(getX() - 1.5);
+    setX(getX() - 2);
 }
