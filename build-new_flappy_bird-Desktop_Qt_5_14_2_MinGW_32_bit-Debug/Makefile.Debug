@@ -299,6 +299,8 @@ debug/moc_app.cpp: ../new_flappy_bird/app/app.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QLabel \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		../new_flappy_bird/viewmodel/viewmodel.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QDebug \
 		debug/moc_predefs.h \
@@ -555,6 +557,8 @@ debug/moc_graphicsview.cpp: ../new_flappy_bird/view/graphicsview.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/qicon.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QLabel \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		debug/moc_predefs.h \
 		../../../qt/QT/5.14.2/mingw73_32/bin/moc.exe
 	F:\qt\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include F:/QT_project/new_flappy_bird/build-new_flappy_bird-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/debug/moc_predefs.h -IF:/qt/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -IF:/QT_project/new_flappy_bird/new_flappy_bird -IF:/qt/QT/5.14.2/mingw73_32/include -IF:/qt/QT/5.14.2/mingw73_32/include/QtWidgets -IF:/qt/QT/5.14.2/mingw73_32/include/QtGui -IF:/qt/QT/5.14.2/mingw73_32/include/QtANGLE -IF:/qt/QT/5.14.2/mingw73_32/include/QtCore -I. -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IF:/qt/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\new_flappy_bird\view\graphicsview.h -o debug\moc_graphicsview.cpp
@@ -693,6 +697,8 @@ debug/moc_mainwindow.cpp: ../new_flappy_bird/view/mainwindow.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QLabel \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		debug/moc_predefs.h \
 		../../../qt/QT/5.14.2/mingw73_32/bin/moc.exe
 	F:\qt\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include F:/QT_project/new_flappy_bird/build-new_flappy_bird-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/debug/moc_predefs.h -IF:/qt/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -IF:/QT_project/new_flappy_bird/new_flappy_bird -IF:/qt/QT/5.14.2/mingw73_32/include -IF:/qt/QT/5.14.2/mingw73_32/include/QtWidgets -IF:/qt/QT/5.14.2/mingw73_32/include/QtGui -IF:/qt/QT/5.14.2/mingw73_32/include/QtANGLE -IF:/qt/QT/5.14.2/mingw73_32/include/QtCore -I. -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IF:/qt/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IF:/qt/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\new_flappy_bird\view\mainwindow.h -o debug\moc_mainwindow.cpp
@@ -918,6 +924,8 @@ debug/app.o: ../new_flappy_bird/app/app.cpp ../new_flappy_bird/app/app.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QLabel \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		../new_flappy_bird/viewmodel/viewmodel.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\app.o ..\new_flappy_bird\app\app.cpp
@@ -1185,6 +1193,8 @@ debug/main.o: ../new_flappy_bird/app/main.cpp ../new_flappy_bird/view/mainwindow
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QLabel \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		../new_flappy_bird/app/app.h \
 		../new_flappy_bird/viewmodel/viewmodel.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QDebug \
@@ -1327,6 +1337,8 @@ debug/graphicsview.o: ../new_flappy_bird/view/graphicsview.cpp ../new_flappy_bir
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/qicon.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QLabel \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/QMouseEvent \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QDebug \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QPoint \
@@ -1467,15 +1479,9 @@ debug/mainwindow.o: ../new_flappy_bird/view/mainwindow.cpp ../new_flappy_bird/vi
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QLabel \
+		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		ui_mainwindow.h \
-		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QVariant \
-		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/QApplication \
-		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qapplication.h \
-		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qcoreapplication.h \
-		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/qeventloop.h \
-		../../../qt/QT/5.14.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/qguiapplication.h \
-		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtGui/QPixmap \
 		../../../qt/QT/5.14.2/mingw73_32/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\new_flappy_bird\view\mainwindow.cpp

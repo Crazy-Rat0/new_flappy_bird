@@ -17,21 +17,13 @@ map* viewmodel::map() const
     return m_map;
 }
 
-void viewmodel::updateGame()
-{
-    m_map->updateBird();
-    // 检查碰撞
-    // if (m_map->checkCollision()) {
-    //     emit gameOver();
-    // }
-    emit gameUpdated();
-}
+
 void viewmodel::onReset()
 {
     m_map->bird()->setX(170);
     m_map->bird()->setY(202);
     m_map->bird()->setIsDead(false);
-    emit birdYChanged();
+    emit GameUpdated();
 }
 
 void viewmodel::onFly()
@@ -39,7 +31,7 @@ void viewmodel::onFly()
 
 
     m_map->bird()->fly();
-    emit birdYChanged();
+    emit GameUpdated();
 
 }
 
@@ -49,7 +41,7 @@ void viewmodel::onDrop()
 
 
     m_map->bird()->drop();
-    emit birdYChanged();
+    emit GameUpdated();
 
 
 }

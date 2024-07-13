@@ -13,7 +13,7 @@ app::app(MainWindow* view)
 
 
     //notifying binding
-    connect(App_viewmodel,&viewmodel::birdYChanged,view->son,&graphicsView::redraw);
+    connect(App_viewmodel,&viewmodel::GameUpdated,view->son,&graphicsView::redraw);
 
 
 

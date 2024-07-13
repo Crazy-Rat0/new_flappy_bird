@@ -18,17 +18,13 @@ public:
     int birdY() const;
 
 public slots:
-    void updateGame();
+
     void onFly();
     void onDrop();
     void onReset();
 
 signals:
-    void gameUpdated();
-    void gameOver();
-    void birdIsDeadChanged();
-    void birdXChanged();
-    void birdYChanged();
+    void GameUpdated();
 
 
 public:

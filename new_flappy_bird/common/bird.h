@@ -18,10 +18,6 @@ public:
     int y() const;
     void setY(int y);
 
-signals:
-    void isDeadChanged();
-    void xChanged();
-    void yChanged();
 
 public slots:
     void drop();

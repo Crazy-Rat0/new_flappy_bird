@@ -14,7 +14,7 @@ void bird::setIsDead(bool isDead)
 {
     if (m_isDead != isDead) {
         m_isDead = isDead;
-        emit isDeadChanged();
+
     }
 }
 
@@ -27,7 +27,7 @@ void bird::setX(int x)
 {
     if (m_x != x) {
         m_x = x;
-        emit xChanged();
+
     }
 }
 
@@ -40,7 +40,7 @@ void bird::setY(int y)
 {
     if (m_y != y) {
         m_y = y;
-        emit yChanged();
+
     }
 }
 
