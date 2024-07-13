@@ -15,8 +15,10 @@ graphicsView::graphicsView(QWidget* parent) : QGraphicsView(parent), view_map(nu
     QPixmap bird(":/Images/bird2.png");
     QPixmap pipe_upper(":/Images/pipe1.png");
     QPixmap pipe_lower(":/Images/pipe2.png");
-    QPixmap score_board(":/Images/scoreboard.png");
-    score_board = score_board.scaled(200, 102);
+    QPixmap all_score_board(":/Images/scoreboard.png");
+    all_score_board = all_score_board.scaled(200, 102);
+    QRect rect(120, 0, 150, 102);
+    QPixmap score_board = all_score_board.copy(rect);
 
     bird_view = new QGraphicsPixmapItem(bird);
     scene_view->addItem(bird_view);
@@ -39,8 +41,8 @@ graphicsView::graphicsView(QWidget* parent) : QGraphicsView(parent), view_map(nu
     best_score = new QGraphicsTextItem(QString::number(0));
     scene_view->addItem(current_score);
     scene_view->addItem(best_score);
-    current_score->setPos(-38, -200);
-    best_score->setPos(-38, -160);
+    current_score->setPos(-158, -200);
+    best_score->setPos(-158, -160);
 
 
     ResetBtn = new QPushButton(this);
