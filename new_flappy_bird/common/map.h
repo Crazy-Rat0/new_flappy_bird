@@ -18,6 +18,7 @@ public:
     bird* getBird() const;
     void generatePipes();
     QList<pipe*> getPipes() const;
+    void clearPipes();
 
 private:
 

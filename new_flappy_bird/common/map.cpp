@@ -33,3 +33,9 @@ void map::generatePipes() {
         m_pipes.append(lowerPipe);
     }
 }
+
+void map::clearPipes()
+{
+    qDeleteAll(m_pipes);
+    m_pipes.clear();
+}

@@ -25,7 +25,7 @@ void viewmodel::onReset()
     m_map->getBird()->setIsDead(false);
 
     //reset pipes
-    m_map->getPipes().clear();
+    m_map->clearPipes();
     m_map->generatePipes();
 
     emit birdYChanged();
