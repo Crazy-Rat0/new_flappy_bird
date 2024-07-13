@@ -27,8 +27,8 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-image: url(&quot;:/Images/bg.png&quot;);
-    background-repeat: no-repeat;
-    background-position: center;</string>
+background-repeat: no-repeat;
+background-position: center;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="minimumSize">

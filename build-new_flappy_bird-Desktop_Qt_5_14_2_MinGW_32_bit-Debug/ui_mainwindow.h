@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QWidget>
 
@@ -20,6 +21,7 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QLabel *label;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -29,13 +31,21 @@ public:
         MainWindow->setMinimumSize(QSize(384, 448));
         MainWindow->setMaximumSize(QSize(384, 448));
         MainWindow->setStyleSheet(QString::fromUtf8("background-image: url(\":/Images/bg.png\");\n"
-"    background-repeat: no-repeat;\n"
-"    background-position: center;"));
+"background-repeat: no-repeat;\n"
+"background-position: center;"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         centralwidget->setMinimumSize(QSize(384, 448));
         centralwidget->setMaximumSize(QSize(384, 448));
         centralwidget->setStyleSheet(QString::fromUtf8(""));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(0, -1, 200, 102));
+        label->setMinimumSize(QSize(200, 102));
+        label->setMaximumSize(QSize(200, 102));
+        label->setStyleSheet(QString::fromUtf8("border-image: url(\":/Images/scoreboard.png\");\n"
+"background-repeat: no-repeat;\n"
+"background-position: center;"));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);

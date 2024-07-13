@@ -23,6 +23,10 @@ public:
     QGraphicsScene* scene_view;
     QGraphicsPixmapItem* bird_view;
     QList<QGraphicsPixmapItem*> pipes_view;
+    QGraphicsPixmapItem* score_board_view;
+    QGraphicsTextItem* current_score;
+    QGraphicsTextItem* best_score;
+    QGraphicsPixmapItem* medal_view;
     QLabel* GameOver;
     QPushButton* ResetBtn;
     map* view_map;
@@ -31,6 +35,8 @@ public:
 public slots:
     void redrawBird();
     void redrawPipes();
+    void updateScore();
+    void updateBestScore();
     void gameOver();
 
 signals:

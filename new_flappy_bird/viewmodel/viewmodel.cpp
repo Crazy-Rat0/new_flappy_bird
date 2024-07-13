@@ -28,12 +28,20 @@ void viewmodel::onReset()
     m_map->clearPipes();
     m_map->generatePipes();
 
+    //reset best score
+    int current_score = m_map->getScoreBoard()->getScore();
+    if (current_score > m_map->getScoreBoard()->getBest()) {
+        m_map->getScoreBoard()->setBest(current_score);
+        emit bestScoreUpdated();
+    }
+
+    //reset score
+    m_map->getScoreBoard()->resetScore();
+
     emit birdYChanged();
     emit pipesMoved();
+    emit scoreUpdated();
     emit gameOver();
-
-
-
 }
 
 
@@ -56,8 +64,12 @@ void viewmodel::updateBird() {
         onDrop();
         if (detectCollision() || m_map->getBird()->getY() <= 0 || m_map->getBird()->getY() >= 448) {
             m_map->getBird()->setIsDead(true);
-            qDebug()<<"$ "<<m_map->getBird()->isDead()<<" $";
+            qDebug() << "$ " << m_map->getBird()->isDead() << " $";
             emit gameOver();
+        }
+        else if (detectPass()) {
+            m_map->getScoreBoard()->addScore();
+            emit scoreUpdated();
         }
     }
 }
@@ -72,6 +84,16 @@ void viewmodel::updatePipes() {
 //        pipe *firstLower = m_map->getPipes().takeFirst();
 //        delete firstUpper;
 //        delete firstLower;
+
+//        int gap = QRandomGenerator::global()->bounded(100, 200);
+//        int h_up = QRandomGenerator::global()->bounded(100, 200);
+//        int h_down = 448 - h_up - gap;
+
+//        pipe *newUpperPipe = new pipe(m_map->getPipes().last()->getX() + 200, h_up, false);
+//        pipe *newLowerPipe = new pipe(m_map->getPipes().last()->getX() + 200, h_down, true);
+
+//        m_map->getPipes().append(newUpperPipe);
+//        m_map->getPipes().append(newLowerPipe);
 //    }
     emit pipesMoved();
 }
@@ -94,27 +116,11 @@ bool viewmodel::detectCollision() {
     return false;
 }
 
-//void viewmodel::movePipes()
-//{
-//    for (Pipe *pipe : qAsConst(m_pipes)) {
-//        pipe->setX(pipe->x() - 4);
-//    }
-
-//    if (m_pipes.first()->x() < -70) {
-//        Pipe *firstUpper = m_pipes.takeFirst();
-//        Pipe *firstLower = m_pipes.takeFirst();
-//        delete firstUpper;
-//        delete firstLower;
-
-//        int h_up = QRandomGenerator::global()->bounded(100, 200);
-//        int h_down = 448 - h_up - m_pipeGap;
-
-//        Pipe *newUpperPipe = new Pipe(nullptr, m_pipes.last()->x() + 200, h_up, false);
-//        Pipe *newLowerPipe = new Pipe(nullptr, m_pipes.last()->x() + 200, h_down, true);
-
-//        m_pipes.append(newUpperPipe);
-//        m_pipes.append(newLowerPipe);
-//    }
-//    emit pipesUpdated();
-//}
-
+bool viewmodel::detectPass() {
+    for (pipe *pipe : m_map->getPipes()) {
+        if (m_map->getBird()->getX() == pipe->getX() + 70) {
+            return true;
+        }
+    }
+    return false;
+}

@@ -6,6 +6,7 @@
 #include <QRandomGenerator>
 #include "bird.h"
 #include "pipe.h"
+#include "scoreboard.h"
 
 class map : public QObject
 {
@@ -16,15 +17,17 @@ public:
     ~map();
 
     bird* getBird() const;
-    void generatePipes();
     QList<pipe*> getPipes() const;
+    scoreboard* getScoreBoard() const;
+
+    void generatePipes();
     void clearPipes();
 
 private:
-
     const static int pipe_count = 32;
     QList<pipe*> m_pipes;
     bird* m_bird;
+    scoreboard* m_scoreboard;
 };
 
 #endif // MAP_H

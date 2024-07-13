@@ -21,6 +21,7 @@ SOURCES += \
     common/map.cpp \
     app/main.cpp \
     common/pipe.cpp \
+    common/scoreboard.cpp \
     view/graphicsview.cpp \
     view/mainwindow.cpp \
     viewmodel/viewmodel.cpp
@@ -30,12 +31,15 @@ HEADERS += \
     common/bird.h \
     common/map.h \
     common/pipe.h \
+    common/scoreboard.h \
     view/graphicsview.h \
     view/mainwindow.h \
     viewmodel/viewmodel.h
 
 FORMS += \
     view/mainwindow.ui
+
+UI_DIR = ./
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

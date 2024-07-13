@@ -3,14 +3,20 @@
 #include <QDebug>
 #include <QPoint>
 #include <QPointF>
+#include <QString>
 
 graphicsView::graphicsView(QWidget* parent) : QGraphicsView(parent), view_map(nullptr)
 {
     scene_view = new QGraphicsScene();
+    this->setScene(scene_view);
+//    this->setFixedSize(384, 448);
+    this->setSceneRect(-192, -224, 384, 448);
 
     QPixmap bird(":/Images/bird2.png");
     QPixmap pipe_upper(":/Images/pipe1.png");
     QPixmap pipe_lower(":/Images/pipe2.png");
+    QPixmap score_board(":/Images/scoreboard.png");
+    score_board = score_board.scaled(200, 102);
 
     bird_view = new QGraphicsPixmapItem(bird);
     scene_view->addItem(bird_view);
@@ -25,24 +31,28 @@ graphicsView::graphicsView(QWidget* parent) : QGraphicsView(parent), view_map(nu
         scene_view->addItem(pipe_view);
     }
 
+    score_board_view = new QGraphicsPixmapItem(score_board);
+    scene_view->addItem(score_board_view);
+    score_board_view->setPos(QPoint(-192, -224));
+
+    current_score = new QGraphicsTextItem(QString::number(0));
+    best_score = new QGraphicsTextItem(QString::number(0));
+    scene_view->addItem(current_score);
+    scene_view->addItem(best_score);
+    current_score->setPos(-38, -200);
+    best_score->setPos(-38, -160);
 
 
-
-    ResetBtn=new QPushButton(this);
-    ResetBtn->move(170,242);
+    ResetBtn = new QPushButton(this);
+    ResetBtn->move(170, 242);
     ResetBtn->hide();
-    ResetBtn->setStyleSheet("background-image: url(:/Images/replay.png);"
-                            );
+    ResetBtn->setStyleSheet("background-image: url(:/Images/replay.png);");
 
-    GameOver=new QLabel(this);
+    GameOver = new QLabel(this);
     GameOver->setFixedSize(256,57);
     GameOver->move(65,140);
     GameOver->hide();
-    GameOver->setStyleSheet("background-image: url(:/Images/gameover.png);"
-                            );
-
-    this->setScene(scene_view);
-    this->setSceneRect(-192, -224, 384, 448);
+    GameOver->setStyleSheet("background-image: url(:/Images/gameover.png);");
 }
 
 
@@ -52,10 +62,10 @@ void graphicsView::redrawBird()
     int y = view_map->getBird()->getY(); // 你的 MainWindow 坐标系下的 y 值
 
     // 将 mainWindowPos 中的 y 坐标转换为视图坐标
-    QPoint viewPosY = this->mapFromParent(QPoint(x, y));
+    QPoint viewPos = this->mapFromParent(QPoint(x, y));
 
     // 将视图坐标转换为场景坐标
-    QPointF scenePos = this->mapToScene(viewPosY);
+    QPointF scenePos = this->mapToScene(viewPos);
 
     // 设置 bird_view 在场景中的位置
     bird_view->setPos(scenePos);
@@ -65,21 +75,33 @@ void graphicsView::redrawPipes() {
     for (QGraphicsPixmapItem* pipe_view : pipes_view) {
         pipe* pipe = view_map->getPipes().at(pipes_view.indexOf(pipe_view));
 
-        QPoint viewPosX;
+        QPoint viewPos;
         if (pipe->isUpper()) {
-            viewPosX = this->mapFromParent(QPoint(pipe->getX(), pipe->getH() - 250));
+            viewPos = this->mapFromParent(QPoint(pipe->getX(), pipe->getH() - 250));
         }
         else {
-            viewPosX = this->mapFromParent(QPoint(pipe->getX(), 448 - pipe->getH()));
+            viewPos = this->mapFromParent(QPoint(pipe->getX(), 448 - pipe->getH()));
         }
-        QPointF scenePos = this->mapToScene(viewPosX);
+        QPointF scenePos = this->mapToScene(viewPos);
         pipe_view->setPos(scenePos);
     }
 }
 
+void graphicsView::updateScore() {
+    int score = view_map->getScoreBoard()->getScore();
+    qDebug() << "current score:" << score;
+    current_score->setPlainText(QString::number(score));
+}
+
+void graphicsView::updateBestScore() {
+    int best = view_map->getScoreBoard()->getBest();
+    qDebug() << "best score" << best;
+    best_score->setPlainText(QString::number(best));
+}
+
 void graphicsView::gameOver()
 {
-    qDebug() << "over1";
+    qDebug() << "gameover";
     if(view_map->getBird()->isDead())
     {
         qDebug() << "show over";

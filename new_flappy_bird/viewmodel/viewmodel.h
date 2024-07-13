@@ -26,11 +26,14 @@ public slots:
 signals:
     void birdYChanged();
     void pipesMoved();
+    void scoreUpdated();
+    void bestScoreUpdated();
 
     void gameOver();
 
 private:
     bool detectCollision();
+    bool detectPass();
     map* m_map;
 };
 

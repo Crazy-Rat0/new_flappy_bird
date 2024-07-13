@@ -12,6 +12,8 @@ app::app(MainWindow* view)
     connect(App_viewmodel, &viewmodel::birdYChanged, view->son, &graphicsView::redrawBird);
     connect(App_viewmodel, &viewmodel::gameOver, view->son, &graphicsView::gameOver);
     connect(App_viewmodel, &viewmodel::pipesMoved, view->son, &graphicsView::redrawPipes);
+    connect(App_viewmodel, &viewmodel::scoreUpdated, view->son, &graphicsView::updateScore);
+    connect(App_viewmodel, &viewmodel::bestScoreUpdated, view->son, &graphicsView::updateBestScore);
 
     // data binding
     view->son->setMap(App_viewmodel->getMap());

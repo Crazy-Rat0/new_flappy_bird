@@ -5,6 +5,7 @@ map::map(QObject *parent)
 {
     m_bird = new bird();
     generatePipes();
+    m_scoreboard = new scoreboard();
 }
 
 map::~map() {
@@ -18,6 +19,10 @@ bird* map::getBird() const {
 
 QList<pipe*> map::getPipes() const {
     return m_pipes;
+}
+
+scoreboard* map::getScoreBoard() const{
+    return m_scoreboard;
 }
 
 void map::generatePipes() {
